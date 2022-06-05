@@ -1,0 +1,1140 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local QuantumHub = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local borders = Instance.new("Folder")
+local border = Instance.new("TextLabel")
+local mainFrame = Instance.new("ScrollingFrame")
+local Gravity = Instance.new("TextButton")
+local ws = Instance.new("TextButton")
+local jp = Instance.new("TextButton")
+local GNum = Instance.new("TextBox")
+local WSNum = Instance.new("TextBox")
+local JPNum = Instance.new("TextBox")
+local noclip = Instance.new("TextButton")
+local resetAbove = Instance.new("TextButton")
+local NCStatus = Instance.new("TextLabel")
+local killPlayer = Instance.new("TextButton")
+local plrname = Instance.new("TextBox")
+local loopkillPlayer = Instance.new("TextButton")
+local GodMode = Instance.new("TextButton")
+local GMStatus = Instance.new("TextLabel")
+local resetBelow = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+local ESPStatus = Instance.new("TextLabel")
+local INFJump = Instance.new("TextButton")
+local INFJStatus = Instance.new("TextLabel")
+local BTools = Instance.new("TextButton")
+local BTStatus = Instance.new("TextLabel")
+local resetBelow2 = Instance.new("TextButton")
+local FullBright = Instance.new("TextButton")
+local FBStatus = Instance.new("TextLabel")
+local HighlightSelf = Instance.new("TextButton")
+local HSStatus = Instance.new("TextLabel")
+local creator = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local main = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Settings = Instance.new("TextButton")
+local scriptHub = Instance.new("TextButton")
+local Logo = Instance.new("TextLabel")
+local settingsFrame = Instance.new("ScrollingFrame")
+local RESP = Instance.new("TextButton")
+local ESPSETTINGS = Instance.new("TextLabel")
+local TargetESP = Instance.new("TextButton")
+local SSORLOCAL = Instance.new("TextLabel")
+local Server = Instance.new("TextButton")
+local Client = Instance.new("TextButton")
+local scriptHubFrame = Instance.new("ScrollingFrame")
+local ExploitBtn = Instance.new("TextButton")
+local ExploitBtn_2 = Instance.new("TextButton")
+local ExploitBtn_3 = Instance.new("TextButton")
+local ExploitBtn_4 = Instance.new("TextButton")
+
+--Properties:
+
+QuantumHub.Name = "QuantumHub"
+QuantumHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+QuantumHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = QuantumHub
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(8, 0, 20)
+Frame.Position = UDim2.new(0.504797041, 0, 0.527089953, 0)
+Frame.Size = UDim2.new(0.373431742, 0, 0.455108345, 0)
+
+borders.Name = "borders"
+borders.Parent = Frame
+
+border.Name = "border"
+border.Parent = borders
+border.BackgroundColor3 = Color3.fromRGB(0, 200, 200)
+border.BorderColor3 = Color3.fromRGB(0, 0, 0)
+border.BorderSizePixel = 0
+border.Position = UDim2.new(0, 0, 0.0799999982, 0)
+border.Size = UDim2.new(1, 0, 0.00499999989, 0)
+border.Font = Enum.Font.Gotham
+border.Text = ""
+border.TextColor3 = Color3.fromRGB(0, 0, 0)
+border.TextSize = 20.000
+border.TextWrapped = true
+
+mainFrame.Name = "mainFrame"
+mainFrame.Parent = Frame
+mainFrame.Active = true
+mainFrame.BackgroundColor3 = Color3.fromRGB(150, 0, 255)
+mainFrame.BackgroundTransparency = 1.000
+mainFrame.BorderColor3 = Color3.fromRGB(0, 200, 200)
+mainFrame.BorderSizePixel = 2
+mainFrame.Position = UDim2.new(0, 0, 0.207634076, 0)
+mainFrame.Size = UDim2.new(1.00000012, 0, 0.792366028, 0)
+mainFrame.ScrollBarThickness = 10
+mainFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+Gravity.Name = "Gravity"
+Gravity.Parent = mainFrame
+Gravity.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Gravity.BorderColor3 = Color3.fromRGB(78, 0, 162)
+Gravity.Position = UDim2.new(0.0237926617, 0, 0.00777414814, 0)
+Gravity.Size = UDim2.new(0, 150, 0, 38)
+Gravity.Font = Enum.Font.Code
+Gravity.Text = "Set Gravity"
+Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gravity.TextSize = 20.000
+Gravity.TextWrapped = true
+
+ws.Name = "ws"
+ws.Parent = mainFrame
+ws.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ws.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ws.Position = UDim2.new(0.350125998, 0, 0.0079263011, 0)
+ws.Size = UDim2.new(0, 150, 0, 38)
+ws.Font = Enum.Font.Code
+ws.Text = "Walk Speed"
+ws.TextColor3 = Color3.fromRGB(255, 255, 255)
+ws.TextSize = 20.000
+ws.TextWrapped = true
+
+jp.Name = "jp"
+jp.Parent = mainFrame
+jp.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+jp.BorderColor3 = Color3.fromRGB(78, 0, 162)
+jp.Position = UDim2.new(0.676666677, 0, 0.00688526873, 0)
+jp.Size = UDim2.new(0, 150, 0, 38)
+jp.Font = Enum.Font.Code
+jp.Text = "Jump Power"
+jp.TextColor3 = Color3.fromRGB(255, 255, 255)
+jp.TextSize = 20.000
+jp.TextWrapped = true
+
+GNum.Name = "GNum"
+GNum.Parent = mainFrame
+GNum.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GNum.BorderColor3 = Color3.fromRGB(78, 0, 162)
+GNum.Position = UDim2.new(0.0231259875, 0, 0.0963768139, 0)
+GNum.Size = UDim2.new(0, 150, 0, 20)
+GNum.Font = Enum.Font.Code
+GNum.PlaceholderText = "default: 196.2"
+GNum.Text = ""
+GNum.TextColor3 = Color3.fromRGB(255, 255, 255)
+GNum.TextSize = 15.000
+
+WSNum.Name = "WSNum"
+WSNum.Parent = mainFrame
+WSNum.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+WSNum.BorderColor3 = Color3.fromRGB(78, 0, 162)
+WSNum.Position = UDim2.new(0.350125998, 0, 0.0977287665, 0)
+WSNum.Size = UDim2.new(0, 150, 0, 20)
+WSNum.Font = Enum.Font.Code
+WSNum.PlaceholderText = "default: 16"
+WSNum.Text = ""
+WSNum.TextColor3 = Color3.fromRGB(255, 255, 255)
+WSNum.TextSize = 15.000
+
+JPNum.Name = "JPNum"
+JPNum.Parent = mainFrame
+JPNum.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JPNum.BorderColor3 = Color3.fromRGB(78, 0, 162)
+JPNum.Position = UDim2.new(0.678062975, 0, 0.0965910926, 0)
+JPNum.Size = UDim2.new(0, 150, 0, 20)
+JPNum.Font = Enum.Font.Code
+JPNum.PlaceholderText = "default: 50"
+JPNum.Text = ""
+JPNum.TextColor3 = Color3.fromRGB(255, 255, 255)
+JPNum.TextSize = 15.000
+
+noclip.Name = "noclip"
+noclip.Parent = mainFrame
+noclip.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+noclip.BorderColor3 = Color3.fromRGB(78, 0, 162)
+noclip.Position = UDim2.new(0.0218241587, 0, 0.254358023, 0)
+noclip.Size = UDim2.new(0, 150, 0, 38)
+noclip.Font = Enum.Font.Code
+noclip.Text = "Noclip"
+noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+noclip.TextSize = 20.000
+noclip.TextWrapped = true
+
+resetAbove.Name = "resetAbove"
+resetAbove.Parent = mainFrame
+resetAbove.BackgroundColor3 = Color3.fromRGB(60, 0, 0)
+resetAbove.BorderColor3 = Color3.fromRGB(78, 0, 162)
+resetAbove.Position = UDim2.new(0.023792658, 0, 0.157803908, 0)
+resetAbove.Size = UDim2.new(0, 482, 0, 38)
+resetAbove.Font = Enum.Font.Code
+resetAbove.Text = "Reset Above"
+resetAbove.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetAbove.TextSize = 20.000
+resetAbove.TextWrapped = true
+
+NCStatus.Name = "NCStatus"
+NCStatus.Parent = mainFrame
+NCStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NCStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+NCStatus.Position = UDim2.new(0.0236220472, 0, 0.344720513, 0)
+NCStatus.Size = UDim2.new(0, 150, 0, 20)
+NCStatus.Font = Enum.Font.Code
+NCStatus.Text = "false"
+NCStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+NCStatus.TextSize = 20.000
+NCStatus.TextWrapped = true
+
+killPlayer.Name = "killPlayer"
+killPlayer.Parent = mainFrame
+killPlayer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+killPlayer.BorderColor3 = Color3.fromRGB(78, 0, 162)
+killPlayer.Position = UDim2.new(0.348595798, 0, 0.254358023, 0)
+killPlayer.Size = UDim2.new(0, 150, 0, 38)
+killPlayer.Font = Enum.Font.Code
+killPlayer.Text = "Kill Player"
+killPlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+killPlayer.TextSize = 20.000
+killPlayer.TextWrapped = true
+
+plrname.Name = "plrname"
+plrname.Parent = mainFrame
+plrname.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+plrname.BorderColor3 = Color3.fromRGB(78, 0, 162)
+plrname.Position = UDim2.new(0.348157525, 0, 0.344856024, 0)
+plrname.Size = UDim2.new(0, 315, 0, 20)
+plrname.Font = Enum.Font.Code
+plrname.PlaceholderText = "playername"
+plrname.Text = ""
+plrname.TextColor3 = Color3.fromRGB(255, 255, 255)
+plrname.TextSize = 15.000
+
+loopkillPlayer.Name = "loopkillPlayer"
+loopkillPlayer.Parent = mainFrame
+loopkillPlayer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+loopkillPlayer.BorderColor3 = Color3.fromRGB(78, 0, 162)
+loopkillPlayer.Position = UDim2.new(0.675367475, 0, 0.254358023, 0)
+loopkillPlayer.Size = UDim2.new(0, 150, 0, 38)
+loopkillPlayer.Font = Enum.Font.Code
+loopkillPlayer.Text = "Loopkill Player"
+loopkillPlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+loopkillPlayer.TextSize = 18.000
+loopkillPlayer.TextWrapped = true
+
+GodMode.Name = "GodMode"
+GodMode.Parent = mainFrame
+GodMode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GodMode.BorderColor3 = Color3.fromRGB(78, 0, 162)
+GodMode.Position = UDim2.new(0.0257611647, 0, 0.497111678, 0)
+GodMode.Size = UDim2.new(0, 150, 0, 38)
+GodMode.Font = Enum.Font.Code
+GodMode.Text = "God Mode"
+GodMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+GodMode.TextSize = 20.000
+GodMode.TextWrapped = true
+
+GMStatus.Name = "GMStatus"
+GMStatus.Parent = mainFrame
+GMStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GMStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+GMStatus.Position = UDim2.new(0.0236220472, 0, 0.589285791, 0)
+GMStatus.Size = UDim2.new(0, 150, 0, 20)
+GMStatus.Font = Enum.Font.Code
+GMStatus.Text = "false"
+GMStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+GMStatus.TextSize = 20.000
+GMStatus.TextWrapped = true
+
+resetBelow.Name = "resetBelow"
+resetBelow.Parent = mainFrame
+resetBelow.BackgroundColor3 = Color3.fromRGB(60, 0, 0)
+resetBelow.BorderColor3 = Color3.fromRGB(78, 0, 162)
+resetBelow.Position = UDim2.new(0.0257611647, 0, 0.407803923, 0)
+resetBelow.Size = UDim2.new(0, 482, 0, 38)
+resetBelow.Font = Enum.Font.Code
+resetBelow.Text = "Reset Below"
+resetBelow.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetBelow.TextSize = 20.000
+resetBelow.TextWrapped = true
+
+ESP.Name = "ESP"
+ESP.Parent = mainFrame
+ESP.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ESP.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ESP.Position = UDim2.new(0.350564212, 0, 0.497111678, 0)
+ESP.Size = UDim2.new(0, 150, 0, 38)
+ESP.Font = Enum.Font.Code
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextSize = 20.000
+ESP.TextWrapped = true
+
+ESPStatus.Name = "ESPStatus"
+ESPStatus.Parent = mainFrame
+ESPStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ESPStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ESPStatus.Position = UDim2.new(0.350393593, 0, 0.589285791, 0)
+ESPStatus.Size = UDim2.new(0, 150, 0, 20)
+ESPStatus.Font = Enum.Font.Code
+ESPStatus.Text = "false"
+ESPStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+ESPStatus.TextSize = 20.000
+ESPStatus.TextWrapped = true
+
+INFJump.Name = "INFJump"
+INFJump.Parent = mainFrame
+INFJump.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+INFJump.BorderColor3 = Color3.fromRGB(78, 0, 162)
+INFJump.Position = UDim2.new(0.673398733, 0, 0.497111678, 0)
+INFJump.Size = UDim2.new(0, 150, 0, 38)
+INFJump.Font = Enum.Font.Code
+INFJump.Text = "Inf Jump"
+INFJump.TextColor3 = Color3.fromRGB(255, 255, 255)
+INFJump.TextSize = 20.000
+INFJump.TextWrapped = true
+
+INFJStatus.Name = "INFJStatus"
+INFJStatus.Parent = mainFrame
+INFJStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+INFJStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+INFJStatus.Position = UDim2.new(0.673228145, 0, 0.589285791, 0)
+INFJStatus.Size = UDim2.new(0, 150, 0, 20)
+INFJStatus.Font = Enum.Font.Code
+INFJStatus.Text = "false"
+INFJStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+INFJStatus.TextSize = 20.000
+INFJStatus.TextWrapped = true
+
+BTools.Name = "BTools"
+BTools.Parent = mainFrame
+BTools.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BTools.BorderColor3 = Color3.fromRGB(78, 0, 162)
+BTools.Position = UDim2.new(0.0257611647, 0, 0.741676867, 0)
+BTools.Size = UDim2.new(0, 150, 0, 38)
+BTools.Font = Enum.Font.Code
+BTools.Text = "BTools"
+BTools.TextColor3 = Color3.fromRGB(255, 255, 255)
+BTools.TextSize = 20.000
+BTools.TextWrapped = true
+
+BTStatus.Name = "BTStatus"
+BTStatus.Parent = mainFrame
+BTStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BTStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+BTStatus.Position = UDim2.new(0.0255905502, 0, 0.828416169, 0)
+BTStatus.Size = UDim2.new(0, 150, 0, 20)
+BTStatus.Font = Enum.Font.Code
+BTStatus.Text = "false"
+BTStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+BTStatus.TextSize = 20.000
+BTStatus.TextWrapped = true
+
+resetBelow2.Name = "resetBelow2"
+resetBelow2.Parent = mainFrame
+resetBelow2.BackgroundColor3 = Color3.fromRGB(60, 0, 0)
+resetBelow2.BorderColor3 = Color3.fromRGB(78, 0, 162)
+resetBelow2.Position = UDim2.new(0.0237926655, 0, 0.64693433, 0)
+resetBelow2.Size = UDim2.new(0, 482, 0, 38)
+resetBelow2.Font = Enum.Font.Code
+resetBelow2.Text = "Reset Below"
+resetBelow2.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetBelow2.TextSize = 20.000
+resetBelow2.TextWrapped = true
+
+FullBright.Name = "FullBright"
+FullBright.Parent = mainFrame
+FullBright.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+FullBright.BorderColor3 = Color3.fromRGB(78, 0, 162)
+FullBright.Position = UDim2.new(0.352532715, 0, 0.741676867, 0)
+FullBright.Size = UDim2.new(0, 150, 0, 38)
+FullBright.Font = Enum.Font.Code
+FullBright.Text = "Full Bright"
+FullBright.TextColor3 = Color3.fromRGB(255, 255, 255)
+FullBright.TextSize = 20.000
+FullBright.TextWrapped = true
+
+FBStatus.Name = "FBStatus"
+FBStatus.Parent = mainFrame
+FBStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+FBStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+FBStatus.Position = UDim2.new(0.352362096, 0, 0.828416169, 0)
+FBStatus.Size = UDim2.new(0, 150, 0, 20)
+FBStatus.Font = Enum.Font.Code
+FBStatus.Text = "false"
+FBStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+FBStatus.TextSize = 20.000
+FBStatus.TextWrapped = true
+
+HighlightSelf.Name = "HighlightSelf"
+HighlightSelf.Parent = mainFrame
+HighlightSelf.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+HighlightSelf.BorderColor3 = Color3.fromRGB(78, 0, 162)
+HighlightSelf.Position = UDim2.new(0.673398733, 0, 0.741676867, 0)
+HighlightSelf.Size = UDim2.new(0, 150, 0, 38)
+HighlightSelf.Font = Enum.Font.Code
+HighlightSelf.Text = "Rainbow Self"
+HighlightSelf.TextColor3 = Color3.fromRGB(255, 255, 255)
+HighlightSelf.TextSize = 20.000
+HighlightSelf.TextWrapped = true
+
+HSStatus.Name = "HSStatus"
+HSStatus.Parent = mainFrame
+HSStatus.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+HSStatus.BorderColor3 = Color3.fromRGB(78, 0, 162)
+HSStatus.Position = UDim2.new(0.673228145, 0, 0.828416169, 0)
+HSStatus.Size = UDim2.new(0, 150, 0, 20)
+HSStatus.Font = Enum.Font.Code
+HSStatus.Text = "false"
+HSStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+HSStatus.TextSize = 20.000
+HSStatus.TextWrapped = true
+
+creator.Name = "creator"
+creator.Parent = mainFrame
+creator.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+creator.BackgroundTransparency = 1.000
+creator.BorderColor3 = Color3.fromRGB(78, 0, 162)
+creator.Position = UDim2.new(0.027570622, 0, 0.948364079, 0)
+creator.Size = UDim2.new(0, 478, 0, 17)
+creator.Font = Enum.Font.FredokaOne
+creator.Text = "GUI Made By radicore15742"
+creator.TextColor3 = Color3.fromRGB(0, 255, 213)
+creator.TextScaled = true
+creator.TextSize = 15.000
+creator.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.00659165252, 0, 0, 0)
+Title.Size = UDim2.new(0.981666684, 0, 0.0802292228, 0)
+Title.Font = Enum.Font.GothamBold
+Title.Text = "Quantum Hub"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 20.000
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+
+main.Name = "main"
+main.Parent = Frame
+main.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.0257611293, 0, 0.107429385, 0)
+main.Size = UDim2.new(0.305530488, 0, 0.0765759423, 0)
+main.Font = Enum.Font.GothamBold
+main.Text = "Main"
+main.TextColor3 = Color3.fromRGB(255, 255, 255)
+main.TextSize = 16.000
+main.TextStrokeTransparency = 0.000
+
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = Frame
+
+Settings.Name = "Settings"
+Settings.Parent = Frame
+Settings.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Settings.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.345917791, 0, 0.107429385, 0)
+Settings.Size = UDim2.new(0.305530488, 0, 0.0765759423, 0)
+Settings.Font = Enum.Font.GothamBold
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextSize = 16.000
+Settings.TextStrokeTransparency = 0.000
+
+scriptHub.Name = "scriptHub"
+scriptHub.Parent = Frame
+scriptHub.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+scriptHub.BorderColor3 = Color3.fromRGB(255, 255, 255)
+scriptHub.BorderSizePixel = 0
+scriptHub.Position = UDim2.new(0.666074574, 0, 0.107429385, 0)
+scriptHub.Size = UDim2.new(0.305530488, 0, 0.0765759423, 0)
+scriptHub.Font = Enum.Font.GothamBold
+scriptHub.Text = "Script Hub"
+scriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptHub.TextSize = 16.000
+scriptHub.TextStrokeTransparency = 0.000
+
+Logo.Name = "Logo"
+Logo.Parent = Frame
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0, 0, -0.00499999989, 0)
+Logo.Size = UDim2.new(0.0500000007, 0, 0.0799999982, 0)
+Logo.Font = Enum.Font.FredokaOne
+Logo.Text = "Q"
+Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Logo.TextScaled = true
+Logo.TextSize = 22.000
+Logo.TextStrokeTransparency = 0.000
+Logo.TextWrapped = true
+
+settingsFrame.Name = "settingsFrame"
+settingsFrame.Parent = Frame
+settingsFrame.Active = true
+settingsFrame.BackgroundColor3 = Color3.fromRGB(150, 0, 255)
+settingsFrame.BackgroundTransparency = 1.000
+settingsFrame.BorderColor3 = Color3.fromRGB(0, 200, 200)
+settingsFrame.BorderSizePixel = 2
+settingsFrame.Position = UDim2.new(0, 0, 0.207634076, 0)
+settingsFrame.Size = UDim2.new(1.00000012, 0, 0.792366028, 0)
+settingsFrame.Visible = false
+settingsFrame.CanvasSize = UDim2.new(0, 0, 1.10000002, 0)
+settingsFrame.ScrollBarThickness = 10
+settingsFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+RESP.Name = "RESP"
+RESP.Parent = settingsFrame
+RESP.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+RESP.BorderColor3 = Color3.fromRGB(78, 0, 162)
+RESP.Position = UDim2.new(0.0336351655, 0, 0.133082107, 0)
+RESP.Size = UDim2.new(0, 151, 0, 38)
+RESP.Font = Enum.Font.Code
+RESP.Text = "Rainbow ESP: off"
+RESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+RESP.TextSize = 18.000
+RESP.TextWrapped = true
+
+ESPSETTINGS.Name = "ESP SETTINGS"
+ESPSETTINGS.Parent = settingsFrame
+ESPSETTINGS.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ESPSETTINGS.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ESPSETTINGS.Position = UDim2.new(0.0336351655, 0, 0.010429997, 0)
+ESPSETTINGS.Size = UDim2.new(0, 482, 0, 19)
+ESPSETTINGS.Font = Enum.Font.Code
+ESPSETTINGS.Text = "ESP SETTINGS"
+ESPSETTINGS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPSETTINGS.TextSize = 20.000
+ESPSETTINGS.TextWrapped = true
+
+TargetESP.Name = "TargetESP"
+TargetESP.Parent = settingsFrame
+TargetESP.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TargetESP.BorderColor3 = Color3.fromRGB(78, 0, 162)
+TargetESP.Position = UDim2.new(0.355157465, 0, 0.132114857, 0)
+TargetESP.Size = UDim2.new(0, 318, 0, 38)
+TargetESP.Font = Enum.Font.Code
+TargetESP.Text = "ESP Target: Full"
+TargetESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+TargetESP.TextSize = 18.000
+TargetESP.TextWrapped = true
+
+SSORLOCAL.Name = "SS OR LOCAL"
+SSORLOCAL.Parent = settingsFrame
+SSORLOCAL.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SSORLOCAL.BorderColor3 = Color3.fromRGB(78, 0, 162)
+SSORLOCAL.Position = UDim2.new(0.0336351655, 0, 0.316754133, 0)
+SSORLOCAL.Size = UDim2.new(0, 482, 0, 19)
+SSORLOCAL.Font = Enum.Font.Code
+SSORLOCAL.Text = "SERVER-SIDE OR LOCAL"
+SSORLOCAL.TextColor3 = Color3.fromRGB(255, 255, 255)
+SSORLOCAL.TextSize = 20.000
+SSORLOCAL.TextWrapped = true
+
+Server.Name = "Server"
+Server.Parent = settingsFrame
+Server.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Server.BorderColor3 = Color3.fromRGB(78, 0, 162)
+Server.Position = UDim2.new(0.0323229134, 0, 0.443235099, 0)
+Server.Size = UDim2.new(0, 207, 0, 38)
+Server.Font = Enum.Font.Code
+Server.Text = "Server-Sided"
+Server.TextColor3 = Color3.fromRGB(255, 255, 255)
+Server.TextSize = 18.000
+Server.TextWrapped = true
+
+Client.Name = "Client"
+Client.Parent = settingsFrame
+Client.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Client.BorderColor3 = Color3.fromRGB(78, 0, 162)
+Client.Position = UDim2.new(0.573661327, 0, 0.443235099, 0)
+Client.Size = UDim2.new(0, 207, 0, 38)
+Client.Font = Enum.Font.Code
+Client.Text = "Client"
+Client.TextColor3 = Color3.fromRGB(255, 255, 255)
+Client.TextSize = 18.000
+Client.TextWrapped = true
+
+scriptHubFrame.Name = "scriptHubFrame"
+scriptHubFrame.Parent = Frame
+scriptHubFrame.Active = true
+scriptHubFrame.BackgroundColor3 = Color3.fromRGB(150, 0, 255)
+scriptHubFrame.BackgroundTransparency = 1.000
+scriptHubFrame.BorderColor3 = Color3.fromRGB(0, 200, 200)
+scriptHubFrame.BorderSizePixel = 2
+scriptHubFrame.Position = UDim2.new(0, 0, 0.207634076, 0)
+scriptHubFrame.Size = UDim2.new(1.00000012, 0, 0.792366028, 0)
+scriptHubFrame.Visible = false
+scriptHubFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+scriptHubFrame.ScrollBarThickness = 10
+scriptHubFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+ExploitBtn.Name = "ExploitBtn"
+ExploitBtn.Parent = scriptHubFrame
+ExploitBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExploitBtn.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ExploitBtn.Position = UDim2.new(0.360406727, 0, 0.0315988064, 0)
+ExploitBtn.Size = UDim2.new(0, 150, 0, 72)
+ExploitBtn.Font = Enum.Font.Code
+ExploitBtn.Text = "OP Animations"
+ExploitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExploitBtn.TextSize = 20.000
+ExploitBtn.TextWrapped = true
+
+ExploitBtn_2.Name = "ExploitBtn"
+ExploitBtn_2.Parent = scriptHubFrame
+ExploitBtn_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExploitBtn_2.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ExploitBtn_2.Position = UDim2.new(0.0375721753, 0, 0.383048087, 0)
+ExploitBtn_2.Size = UDim2.new(0, 150, 0, 72)
+ExploitBtn_2.Font = Enum.Font.Code
+ExploitBtn_2.Text = "E to FLY"
+ExploitBtn_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExploitBtn_2.TextSize = 20.000
+ExploitBtn_2.TextWrapped = true
+
+ExploitBtn_3.Name = "ExploitBtn"
+ExploitBtn_3.Parent = scriptHubFrame
+ExploitBtn_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExploitBtn_3.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ExploitBtn_3.Position = UDim2.new(0.360406727, 0, 0.383048087, 0)
+ExploitBtn_3.Size = UDim2.new(0, 150, 0, 72)
+ExploitBtn_3.Font = Enum.Font.Code
+ExploitBtn_3.Text = "Arsenal Hacks"
+ExploitBtn_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExploitBtn_3.TextSize = 20.000
+ExploitBtn_3.TextWrapped = true
+
+ExploitBtn_4.Name = "ExploitBtn"
+ExploitBtn_4.Parent = scriptHubFrame
+ExploitBtn_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExploitBtn_4.BorderColor3 = Color3.fromRGB(78, 0, 162)
+ExploitBtn_4.Position = UDim2.new(0.0375721753, 0, 0.0315988064, 0)
+ExploitBtn_4.Size = UDim2.new(0, 150, 0, 72)
+ExploitBtn_4.Font = Enum.Font.Code
+ExploitBtn_4.Text = "OP Prison Breaker"
+ExploitBtn_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExploitBtn_4.TextSize = 20.000
+ExploitBtn_4.TextWrapped = true
+
+-- Scripts:
+
+local function SAJCNE_fake_script() -- border.rgb 
+	local script = Instance.new('LocalScript', border)
+
+	local colourChangeRate = 0.005
+	local parent = script.Parent
+	local count = 0
+	
+	function zz(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	while wait(0.000001) do
+		parent.BackgroundColor3 = Color3.fromHSV(zz(count),1,1)
+		count = count + colourChangeRate
+	end
+end
+coroutine.wrap(SAJCNE_fake_script)()
+local function EOHKX_fake_script() -- mainFrame.ButtonHubMain 
+	local script = Instance.new('LocalScript', mainFrame)
+
+	local p = script.Parent
+	wait(0.01)
+	local plr = game.Players.LocalPlayer
+	local G = game.Workspace.Gravity
+	local ws = plr.Character.Humanoid.WalkSpeed
+	local jp = plr.Character.Humanoid.JumpPower
+	local Clipon = false
+	local Stepped
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local loop = false
+	local jumped
+	local settingsFrame = p.Parent.settingsFrame
+	local SavedBrightness = game.Lighting.Brightness
+	local function RemoveSpaces(String) return String:gsub("%s+", "") or String end
+	local function FindPlayer(String)
+		String = RemoveSpaces(String)
+		for _, _Player in pairs(Players:GetPlayers()) do
+			if _Player.Name:lower():match('^'.. String:lower()) then
+				return _Player
+			end
+		end
+		return nil
+	end
+	
+	local function tp(player,player2)
+		local char1,char2=player.Character,player2.Character
+		if char1 and char2 then
+			char1:MoveTo(char2.Head.Position)
+		end
+	end
+	
+	p.GNum.Text = math.round(game.Workspace.Gravity)
+	p.WSNum.Text = plr.Character.Humanoid.WalkSpeed
+	p.JPNum.Text = plr.Character.Humanoid.JumpPower
+	
+	p.Gravity.MouseButton1Click:Connect(function()
+		game.Workspace.Gravity = p.GNum.Text
+	end)
+	p.ws.MouseButton1Click:Connect(function()
+		plr.Character.Humanoid.WalkSpeed = p.WSNum.Text
+	end)
+	p.jp.MouseButton1Click:Connect(function()
+		plr.Character.Humanoid.JumpPower = p.JPNum.Text
+	end)
+	
+	local Status = p.NCStatus
+	p.noclip.MouseButton1Click:connect(function()
+		if Status.Text == "false" then
+			Clipon = true
+			Status.Text = "true"
+			Status.TextColor3 = Color3.new(0,255,0)
+			Stepped = game:GetService("RunService").Stepped:Connect(function()
+				if not Clipon == false then
+					for a, b in pairs(game.Workspace:GetChildren()) do
+						if b.Name == plr.Name then
+							for i, v in pairs(game.Workspace[plr.Name]:GetChildren()) do
+								if v:IsA("BasePart") then
+									v.CanCollide = false
+								end
+							end
+						end
+					end
+				else
+					Stepped:Disconnect()
+				end
+			end)
+		elseif Status.Text == "true" then
+			Status.TextColor3 = Color3.fromRGB(0, 255, 0)
+			Clipon = false
+			Status.Text = "false"
+			Status.TextColor3 = Color3.new(255,0,0)
+		end
+	end)
+	
+	highlight = false
+	p.HighlightSelf.MouseButton1Click:Connect(function()
+		highlight = not highlight
+		if highlight then
+			p.HSStatus.Text = "true"
+			p.HSStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			h = Instance.new("Highlight")
+			h.Parent = plr.Character
+			local colourChangeRate = 0.003
+			local parent = h
+			local count = 0
+			function zz(X) return math.acos(math.cos(X*math.pi))/math.pi end
+			while wait(0.000001) do
+				parent.FillColor = Color3.fromHSV(zz(count),1,1)
+				count = count + colourChangeRate
+			end
+		else
+			p.HSStatus.Text = "false"
+			p.HSStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			h:Destroy()
+		end
+	end)
+	p.resetAbove.MouseButton1Click:Connect(function()
+		game.Workspace.Gravity = G
+		plr.Character.Humanoid.JumpPower = jp
+		plr.Character.Humanoid.WalkSpeed = ws
+		p.GNum.Text = math.floor(game.Workspace.Gravity)
+		p.WSNum.Text = plr.Character.Humanoid.WalkSpeed
+		p.JPNum.Text = plr.Character.Humanoid.JumpPower
+	end)
+	p.resetBelow.MouseButton1Click:Connect(function()
+		p.ESPStatus.Text = "false"
+		p.ESPStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v.Character:FindFirstChildWhichIsA("Highlight") and v.Name ~= plr.Name then
+				if settingsFrame.espType.Value == "Full" then
+					v.Character:FindFirstChildWhichIsA("Highlight"):Destroy()
+				elseif settingsFrame.espType.Value == "Head" then
+					v.Character.Head:FindFirstChildWhichIsA("Highlight"):Destroy()
+				else
+					if v.Character.HumanoidRootPart then
+						v.Character.HumanoidRootPart:FindFirstChildWhichIsA("Highlight"):Destroy()
+					elseif v.Character.Torso then
+						v.Character.Torso:FindFirstChildWhichIsA("Highlight"):Destroy()
+					end
+				end
+				wait()
+			end
+		end
+		p.INFJStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+		p.INFJump.Text = "false"
+		jumped:Disconnect()
+		Stepped:Disconnect()
+		p.GMStatus.Text = "false"
+		p.GMStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+	end)
+	p.resetBelow2.MouseButton1Click:Connect(function()
+		p.FBStatus.Text = "false"
+		p.FBStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+		game.Lighting.Brightness = SavedBrightness
+		p.BTStatus.Text = "false"
+		p.BTStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+		for i,v in pairs(plr.Backpack:GetChildren()) do
+			if v.Name == "HopperBin" then
+				v:Destroy()
+			end
+		end
+		highlight = false
+		p.HSStatus.Text = "false"
+		p.HSStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+		h:Destroy()
+	end)
+	
+	
+	p.killPlayer.MouseButton1Click:Connect(function()
+		local target = game.Players:FindFirstChild(p.plrname.Text)
+		target:MoveTo(Vector3.new(math.huge,math.huge,math.huge))
+	end)
+	
+	p.loopkillPlayer.MouseButton1Click:Connect(function()
+		loop = not loop
+		while loop and wait(4) do
+			local target = game.Players:FindFirstChild(p.plrname.Text).Character.Humanoid
+			target:MoveTo(Vector3.new(math.huge,math.huge,math.huge))
+		end
+	end)
+	
+	god = false
+	
+	p.GodMode.MouseButton1Click:Connect(function()
+		god = not god
+		Stepped = game:GetService("RunService").Stepped:Connect(function()
+			if not god then
+				Stepped:Disconnect()
+				p.GMStatus.Text = "false"
+				p.GMStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			else
+				game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+				game.Players.LocalPlayer.Character.Humanoid.Health = 100
+				p.GMStatus.Text = "true"
+				p.GMStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			end
+		end)
+	end)
+	bt = false
+	p.BTools.MouseButton1Click:Connect(function()
+		bt = not bt
+		if bt then
+			p.BTStatus.Text = "true"
+			p.BTStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			local a = Instance.new("HopperBin", plr.Backpack)
+			local b = Instance.new("HopperBin", plr.Backpack)
+			local c = Instance.new("HopperBin", plr.Backpack)
+			a.BinType = 2; b.BinType = 3; c.BinType = 4
+		else
+			p.BTStatus.Text = "false"
+			p.BTStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			for i,v in pairs(plr.Backpack:GetChildren()) do
+				if v.Name == "HopperBin" then
+					v:Destroy()
+				end
+			end
+		end
+	end)
+	jump = false
+	
+	p.INFJump.MouseButton1Click:Connect(function()
+		jump = not jump
+		if jump then
+			p.INFJStatus.Text = "true"
+			p.INFJStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			jumped = game:GetService("UserInputService").JumpRequest:connect(function()
+				game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")       
+			end)
+		else
+			p.INFJStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			p.INFJump.Text = "false"
+			jumped:Disconnect()
+		end
+	end)
+	fb = false
+	
+	p.FullBright.MouseButton1Click:Connect(function()
+		fb = not fb
+		if fb then
+			p.FBStatus.Text = "true"
+			p.FBStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			game.Lighting.Brightness = 1.5
+		else
+			p.FBStatus.Text = "false"
+			p.FBStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			game.Lighting.Brightness = SavedBrightness
+		end
+	end)
+	
+	
+	esp = false
+	p.ESP.MouseButton1Click:Connect(function()
+		esp = not esp
+		if esp then
+			p.ESPStatus.Text = "true"
+			p.ESPStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			for i,v in pairs(game.Players:GetChildren()) do
+				if v.Name ~= plr.Name then
+					if settingsFrame.espType.Value == "Full" then
+						hh = Instance.new("Highlight")
+						hh.Parent = v.Character
+					elseif settingsFrame.espType.Value == "Head" then
+						hh = Instance.new("Highlight")
+						hh.Parent = v.Character.Head
+					else
+						hh = Instance.new("Highlight")
+						if v.Character.HumanoidRootPart then
+							hh.Parent = v.Character.HumanoidRootPart
+						elseif v.Character.Torso then
+							hh.Parent = v.Character.Torso
+						end
+					end
+				end
+			end
+		else
+			p.ESPStatus.Text = "false"
+			p.ESPStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			for i,v in pairs(game.Players:GetChildren()) do
+				if v.Character:FindFirstChildWhichIsA("Highlight") and v.Name ~= plr.Name then
+					if settingsFrame.espType.Value == "Full" then
+						v.Character:FindFirstChildWhichIsA("Highlight"):Destroy()
+					elseif settingsFrame.espType.Value == "Head" then
+						v.Character.Head:FindFirstChildWhichIsA("Highlight"):Destroy()
+					else
+						if v.Character.HumanoidRootPart then
+							v.Character.HumanoidRootPart:FindFirstChildWhichIsA("Highlight"):Destroy()
+						elseif v.Character.Torso then
+							v.Character.Torso:FindFirstChildWhichIsA("Highlight"):Destroy()
+						end
+					end
+					wait()
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(EOHKX_fake_script)()
+local function HMWO_fake_script() -- creator.rgb 
+	local script = Instance.new('LocalScript', creator)
+
+	local colourChangeRate = 0.005
+	local parent = script.Parent
+	local count = 0
+	
+	function zz(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	while wait(0.000001) do
+		parent.TextColor3 = Color3.fromHSV(zz(count),1,1)
+		count = count + colourChangeRate
+	end
+end
+coroutine.wrap(HMWO_fake_script)()
+local function ZLCA_fake_script() -- Logo.rgb 
+	local script = Instance.new('LocalScript', Logo)
+
+	local colourChangeRate = 0.005
+	local parent = script.Parent
+	local count = 0
+	
+	function zz(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	while wait(0.000001) do
+		parent.TextColor3 = Color3.fromHSV(zz(count),1,1)
+		count = count + colourChangeRate
+	end
+end
+coroutine.wrap(ZLCA_fake_script)()
+local function JXJSDI_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.5
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(JXJSDI_fake_script)()
+local function NQCH_fake_script() -- Frame.ButtonHub 
+	local script = Instance.new('LocalScript', Frame)
+
+	p = script.Parent
+	
+	p.main.MouseButton1Click:Connect(function()
+		p.mainFrame.Visible = true
+		p.scriptHubFrame.Visible = false
+		p.settingsFrame.Visible = false
+	end)
+	
+	p.Settings.MouseButton1Click:Connect(function()
+		p.mainFrame.Visible = false
+		p.scriptHubFrame.Visible = false
+		p.settingsFrame.Visible = true
+	end)
+	
+	p.scriptHub.MouseButton1Click:Connect(function()
+		p.mainFrame.Visible = false
+		p.scriptHubFrame.Visible = true
+		p.settingsFrame.Visible = false
+	end)
+end
+coroutine.wrap(NQCH_fake_script)()
+-- settingsFrame.ButtonHubSettings is disabled.
+local function UESK_fake_script() -- ExploitBtn.LocalScript 
+	local script = Instance.new('LocalScript', ExploitBtn)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+	end)
+end
+coroutine.wrap(UESK_fake_script)()
+local function VNBD_fake_script() -- ExploitBtn_2.LocalScript 
+	local script = Instance.new('LocalScript', ExploitBtn_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		repeat wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		repeat wait() until mouse
+		local plr = game.Players.LocalPlayer
+		local torso = plr.Character.Torso
+		local flying = true
+		local deb = true
+		local ctrl = {f = 0, b = 0, l = 0, r = 0}
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		local maxspeed = 50
+		local speed = 0
+		function Fly()
+			local bg = Instance.new("BodyGyro", torso)
+			bg.P = 9e4
+			bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+			bg.cframe = torso.CFrame
+			local bv = Instance.new("BodyVelocity", torso)
+			bv.velocity = Vector3.new(0,0.1,0)
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			repeat wait()
+				if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+					speed = speed+.5+(speed/maxspeed)
+					if speed > maxspeed then
+						speed = maxspeed
+					end
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+					speed = speed-1
+					if speed < 0 then
+						speed = 0
+					end
+				end
+				if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+					lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+				elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				else
+					bv.velocity = Vector3.new(0,0.1,0)
+				end
+				bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+			until not flying
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			speed = 0
+			bg:Destroy()
+			bv:Destroy()
+		end
+		mouse.KeyDown:connect(function(key)
+			if key:lower() == "e" then
+				if flying then flying = false
+				else
+					flying = true
+					Fly()
+				end
+			elseif key:lower() == "w" then
+				ctrl.f = 1
+			elseif key:lower() == "s" then
+				ctrl.b = -1
+			elseif key:lower() == "a" then
+				ctrl.l = -1
+			elseif key:lower() == "d" then
+				ctrl.r = 1
+			end
+		end)
+		mouse.KeyUp:connect(function(key)
+			if key:lower() == "w" then
+				ctrl.f = 0
+			elseif key:lower() == "s" then
+				ctrl.b = 0
+			elseif key:lower() == "a" then
+				ctrl.l = 0
+			elseif key:lower() == "d" then
+				ctrl.r = 0
+			end
+		end)
+		Fly()
+	end)
+end
+coroutine.wrap(VNBD_fake_script)()
+local function KQEMDT_fake_script() -- ExploitBtn_3.LocalScript 
+	local script = Instance.new('LocalScript', ExploitBtn_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/jfnasdoijfo239092jsj/-TJ-O-GIH-EOINDKLGN-OIO-JG-IEOGJE-GJ-EGJ-GJ-EOIOGJ-EGEJ-JGIDGJKLZJEFW-F-T-D-R-/main/lastloadergithub!GLK%7B!%23LL%23%7B!%40L%7B!%23KPG%7B!%23LPG!%23%7BK%7BPKL%7BFL!%40%7B%23G%7BOPAPG%7BSH(%40G.lua", true))()
+	end)
+	
+	
+end
+coroutine.wrap(KQEMDT_fake_script)()
+local function EJKGY_fake_script() -- ExploitBtn_4.LocalScript 
+	local script = Instance.new('LocalScript', ExploitBtn_4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/kmWxeu8P'))()
+	end)
+end
+coroutine.wrap(EJKGY_fake_script)()
